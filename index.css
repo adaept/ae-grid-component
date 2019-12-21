@@ -15,9 +15,9 @@ h1 {
   #square-container {
     display: grid;
     margin: 0 auto;
-    width: 500px;
-    height: 500px;
-    grid-template-columns: repeat(auto-fill, minmax(1%, 1fr));
+    width: 1000px;
+    height: 1000px;
+    grid-template-columns: repeat(auto-fill, minmax(2%, 1fr));
     grid-gap: 0px;
   }
 
