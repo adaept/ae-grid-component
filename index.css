@@ -12,25 +12,20 @@ h1 {
     color:  green;
   }
 
-  .square-container {
+  #square-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+    margin: 0 auto;
+    width: 500px;
+    height: 500px;
+    grid-template-columns: repeat(auto-fill, minmax(1%, 1fr));
     grid-gap: 0px;
   }
-  
-  .square {
-    background: green;
+
+  #square-container div {
+    justify-content: center;
+    align-items: center;
+    display: flex;
     padding-top: 100%; /* padding trick directly on the grid item */
-    box-sizing: border-box;
-    position: relative;
-  }
-  
-  .square .content { /* absolutely positioned */
-    position: absolute;
-    top: 0;
-    right:0;
-    left: 0;
-    bottom: 0;
   }
 
 #container {

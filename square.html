@@ -19,44 +19,24 @@
   </div>
 
   <!-- Ref: https://stackoverflow.com/questions/46548987/a-grid-layout-with-responsive-squares -->
-  <div class="square-container">
-    <div class="square">
-      <div class="content">1</div>
-    </div>
-    <div class="square">
-      <div class="content">2</div>
-    </div>
-    <div class="square">
-      <div class="content">3</div>
-    </div>
-    <div class="square">
-      <div class="content">4</div>
-    </div>
-    <div class="square">
-      <div class="content column">some content here and there is a lot of text here</div>
-    </div>
-    <div class="square">
-      <div class="content spread">text</div>
-    </div>
-    <div class="square">
-      <div class="content column">some text here</div>
-    </div>
+  <div>
+    <section id="square-container">
+    </section>
   </div>
-
 
   <script>
     (function () {
-      var _cellRed = '<div class="red"></div>',
-        _cellGreen = '<div class="green"></div>';
-      var MAX_CELL = 26;
+      var _cellRedae = '<div class="red"></div>',
+        _cellGreenae = '<div class="green"></div>';
+      var MAX_CELL = 100;
 
       var _gridContainer = document.querySelector('#square-container');
       for (var i = 0; i < MAX_CELL; i++) {
         for (var j = 0; j < MAX_CELL; j++) {
           if ((i + j) % 2 == 0) {
-            _gridContainer.insertAdjacentHTML('beforeend', _cellRed);
+            _gridContainer.insertAdjacentHTML('beforeend', _cellRedae);
           } else {
-            _gridContainer.insertAdjacentHTML('beforeend', _cellGreen);
+            _gridContainer.insertAdjacentHTML('beforeend', _cellGreenae);
           }
         }
       }
