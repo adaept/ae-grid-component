@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="index.css" />
+  <title>aegrid</title>
+</head>
+
+<body>
+
+  <div>
+    <header>
+      <h1>CSS Grid - Choose Your Board Size</h1>
+    </header>
+  </div>
+
+  <!-- Ref: https://stackoverflow.com/questions/46548987/a-grid-layout-with-responsive-squares -->
+  <div class="square-container">
+    <div class="square">
+      <div class="content"> some content here</div>
+    </div>
+    <div class="square">
+      <div class="content"> some content here</div>
+    </div>
+    <div class="square">
+      <div class="content"> some content here</div>
+    </div>
+    <div class="square">
+      <div class="content"> some content here</div>
+    </div>
+    <div class="square">
+      <div class="content column">some content here and there is a lot of text here</div>
+    </div>
+    <div class="square">
+      <div class="content spread">text</div>
+    </div>
+    <div class="square">
+      <div class="content column">some text here</div>
+    </div>
+  </div>
+
+
+  <script>
+    (function () {
+      var _cellRed = '<div class="red"></div>',
+        _cellGreen = '<div class="green"></div>';
+      var MAX_CELL = 26;
+
+      var _gridContainer = document.querySelector('#square-container');
+      for (var i = 0; i < MAX_CELL; i++) {
+        for (var j = 0; j < MAX_CELL; j++) {
+          if ((i + j) % 2 == 0) {
+            _gridContainer.insertAdjacentHTML('beforeend', _cellRed);
+          } else {
+            _gridContainer.insertAdjacentHTML('beforeend', _cellGreen);
+          }
+        }
+      }
+    })();
+  </script>
+</body>
+
+</html>
