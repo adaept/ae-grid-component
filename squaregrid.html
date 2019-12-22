@@ -6,7 +6,7 @@
   <meta name="viewport"
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" type="text/css" href="index.css" />
+  <link rel="stylesheet" type="text/css" href="squaregrid.css" />
   <title>aegrid</title>
 </head>
 
@@ -51,24 +51,6 @@
     </ae-square-grid>
   </div>
 
-  <script>
-    (function () {
-      var _cellRedae = '<div class="red"></div>',
-        _cellGreenae = '<div class="green"></div>';
-      var MAX_CELL = 50;
-
-      var _gridContainer = document.querySelector('#SquareGrid');
-      for (var i = 0; i < MAX_CELL; i++) {
-        for (var j = 0; j < MAX_CELL; j++) {
-          if ((i + j) % 2 == 0) {
-            _gridContainer.insertAdjacentHTML('beforeend', _cellRedaesg);
-          } else {
-            _gridContainer.insertAdjacentHTML('beforeend', _cellGreenaesg);
-          }
-        }
-      }
-    })();
-  </script>
 </body>
 
 </html>

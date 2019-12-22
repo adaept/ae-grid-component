@@ -1,12 +1,12 @@
 ae-square-grid{
   /* The content width you use on your website */
-  --content-width: 1000px;
+  --content-width: 80vw;
   
   /* The size of the gutter */
   --gutter: 0px;
   
   /* The number of columns */
-  --columns: ;
+  --columns: 10;
   
   /* This is the calculation for the row height */
   --row-size: calc(
@@ -47,36 +47,6 @@ header {
 h1 {
     color:  green;
   }
-
-  #square-container {
-    display: grid;
-    margin: 0 auto;
-    width: 1000px;
-    height: 1000px;
-    grid-template-columns: repeat(auto-fill, minmax(2%, 1fr));
-    grid-gap: 0px;
-  }
-
-  #square-container div {
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    padding-top: 100%; /* padding trick directly on the grid item */
-  }
-
-#container {
-  margin: 0 auto;
-  width: 640px;
-  height: 640px;
-  display: grid;
-  grid-template-columns: repeat(26, 1fr);
-}
-
-#container div {
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
 
 .red {
   background-color: green;
