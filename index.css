@@ -12,22 +12,6 @@ h1 {
     color:  green;
   }
 
-  #square-container {
-    display: grid;
-    margin: 0 auto;
-    width: 1000px;
-    height: 1000px;
-    grid-template-columns: repeat(auto-fill, minmax(2%, 1fr));
-    grid-gap: 0px;
-  }
-
-  #square-container div {
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    padding-top: 100%; /* padding trick directly on the grid item */
-  }
-
 #container {
   margin: 0 auto;
   width: 640px;
