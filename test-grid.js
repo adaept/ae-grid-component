@@ -1,4 +1,4 @@
-// Ref: 
+// Ref: https://codepen.io/michellebarker/post/super-powered-layouts-with-css-variables-css-gr
 const ctrlSize = document.querySelector('#size')
 const ctrlposX = document.querySelector('#posX')
 const ctrlposY = document.querySelector('#posY')
@@ -25,20 +25,21 @@ const getValues = (x) => {
 const findCurrItem = () => {
 	rBtns.forEach((el) => {
 		if (el.checked) {
-			currItem = document.querySelector(`[data-id=${el.value}]`)
+			currItem = document.querySelector(`[data-id=${el.value}]`),
+				console.log("A findCurrItem el.value = " + el.value)
 		}
 	})
-	console.log(currItem)
+	console.log("B findCurrItem currItem = " + currItem)
 }
 
 // Set sliders to correct positions
 rBtns.forEach((el, index) => {
 	el.addEventListener('click', () => {
-		findCurrItem() // find the currently selected item
-		getValues(currItem) //get the current properties of the item
-		let currItemProperties = Object.values(currItem.props) // create an array from props
+		findCurrItem() // Find the currently selected item
+		getValues(currItem) // Get the current properties of the item
+		let currItemProperties = Object.values(currItem.props) // Create an array from props
 		inputs.forEach((el, index) => {
-			el.value = currItemProperties[index] // set the sliders to the corresponding values
+			el.value = currItemProperties[index] // Set the sliders to the corresponding values
 		})
 	})
 })
@@ -50,20 +51,23 @@ ctrlSize.addEventListener('change', (e) => {
 	let currPos = currItem.props.posX > currItem.props.posY ? currItem.props.posX : currItem.props.posY
 	if (size < gridSize - (currPos - 1)) {
 		size = size
-		console.log("ctrSize = " + size)
+		console.log("A ctrlSize size = " + size)
 	} else {
 		size = gridSize - (currPos - 1)
+		console.log("B ctrlSize size = " + size)
 	}
 	currItem.style.setProperty('--size', size)
 })
 
 const calcNewProps = (el, str) => {
 	let currSize = currItem.props.size
-	console.log(currSize)
+	console.log("calcNewProps currSize = " + currSize)
 	if (posX < gridSize - (currSize - 1)) {
 		posX = posX
+		console.log("A calcNewProps posX = " + posX)
 	} else {
 		posX = gridSize - (currSize - 1)
+		console.log("B calcNewProps posX = " + posX)
 	}
 	currItem.style.setProperty(str, el)
 }
@@ -72,6 +76,7 @@ ctrlposX.addEventListener('change', (e) => {
 	findCurrItem()
 	getValues(currItem)
 	posX = parseInt(e.target.value)
+	console.log("ctrlposX posX = " + posX)
 	calcNewProps(posX, '--posX')
 })
 
@@ -79,5 +84,6 @@ ctrlposY.addEventListener('change', (e) => {
 	findCurrItem()
 	getValues(currItem)
 	posY = parseInt(e.target.value)
+	console.log("ctrlposY posY = " + posY)
 	calcNewProps(posY, '--posY')
 })
