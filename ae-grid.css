@@ -6,7 +6,11 @@
     --posX: 1;
     --posY: 1;
     --size: 1;
-    --color: yellow;
+    --red: rgba(255, 0, 0, 1);
+    --white-low-opacity: rgba(255, 255, 255, .3);
+    --white-high-opacity: rgba(255, 255, 255, .7);
+    --black-low-opacity: rgba(0, 255, 0, .3);
+    --black-high-opacity: rgba(0, 25, 0, .7);
   }
   .wrapper {
     width: 100vw;
@@ -52,12 +56,23 @@
     grid-column: var(--posX) / span var(--size);
     grid-row: var(--posY) / span var(--size);
   }
+  .grid__item:nth-child(1) {
+    background: 
+      linear-gradient(var(--white-low-opacity), var(--white-low-opacity)) no-repeat,
+      linear-gradient(var(--red), var(--red)) no-repeat;
+  }
   .grid__item:nth-child(2) {
-    --color: red;
+    background: 
+      linear-gradient(var(--white-high-opacity), var(--white-high-opacity)) no-repeat,
+      linear-gradient(var(--red), var(--red)) no-repeat;
   }
   .grid__item:nth-child(3) {
-    --color: green;
+    background: 
+      linear-gradient(var(--black-low-opacity), var(--black-low-opacity)) no-repeat,
+      linear-gradient(var(--red), var(--red)) no-repeat;
   }
   .grid__item:nth-child(4) {
-    --color: blue;
+    background: 
+      linear-gradient(var(--black-high-opacity), var(--black-high-opacity)) no-repeat,
+      linear-gradient(var(--red), var(--red)) no-repeat;
   }
