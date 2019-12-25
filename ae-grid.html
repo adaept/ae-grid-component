@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="ae-grid.css" />
+  <title>aegrid</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="controls">
+      <div class="controls__group controls__group--radio">
+        <div class="controls__rbtn">
+          <input id="item__1" type="radio" name="cells" value="item1" checked>
+          <label for="item_1">Grid cell 1 Yellow</label>
+        </div>
+        <div class="controls__rbtn">
+          <input id="item__2" type="radio" name="cells" value="item2">
+          <label for="item_2">Grid cell 2 Red</label>
+        </div>
+        <div class="controls__rbtn">
+          <input id="item__3" type="radio" name="cells" value="item3">
+          <label for="item_3">Grid cell 3 Green</label>
+        </div>
+        <div class="controls__rbtn">
+          <input id="item__4" type="radio" name="cells" value="item4">
+          <label for="item_4">Grid cell 4 Blue</label>
+        </div>
+      </div>
+      <div class="controls__group">
+        <label for="size">Size</label>
+        <input id="size" type="range" min="1" max="4" value="1">
+      </div>
+      <div class="controls__group">
+        <label for="posX">X Position</label>
+        <input id="posX" type="range" min="1" max="4" value="1">
+      </div>
+      <div class="controls__group">
+        <label for="posY">Y Position</label>
+        <input id="posY" type="range" min="1" max="4" value="1">
+      </div>
+    </div>
+    <div class="grid">
+      <div class="grid__item" data-id="item1"></div>
+      <div class="grid__item" data-id="item2"></div>
+      <div class="grid__item" data-id="item3"></div>
+      <div class="grid__item" data-id="item4"></div>
+    </div>
+  </div>
+  <script type="text/javascript" src="ae-grid.js"></script>
+</body>
+
+</html>

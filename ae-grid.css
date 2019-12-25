@@ -1,0 +1,50 @@
+* {
+	box-sizing: border-box;
+  }
+  :root {
+	--gridSize: 4;
+	--posX: 1;
+	--posY: 1;
+	--size: 1;
+	--color: yellow;
+  }
+  .wrapper {
+	width: 1200px;
+	margin: 40px auto;
+	display: flex;
+  }
+  .controls {
+	margin-right: 40px;
+  }
+  .controls__group {
+	margin-bottom: 30px;
+  }
+  .controls__group > * {
+	display: block;
+  }
+  .controls__rbtn {
+	margin-bottom: 10px;
+  }
+  .grid {
+	display: grid;
+	grid-template-columns: repeat(var(--gridSize), 1fr);
+	grid-template-rows: repeat(var(--gridSize), 1fr);
+	grid-gap: 0px;
+	border: 1px solid grey;
+	width: 640px;
+	height: 640px;
+  }
+  .grid__item {
+	background-color: var(--color);
+	grid-column: var(--posX) / span var(--size);
+	grid-row: var(--posY) / span var(--size);
+  }
+  .grid__item:nth-child(2) {
+	--color: red;
+  }
+  .grid__item:nth-child(3) {
+	--color: green;
+  }
+  .grid__item:nth-child(4) {
+	--color: blue;
+  }
