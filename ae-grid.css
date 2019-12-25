@@ -43,8 +43,8 @@
     grid-template-rows: repeat(var(--gridSize), 1fr);
     grid-gap: 0px;
     border: 1px solid grey;
-    width: 80vw;
-    height: 80vw;
+    width: 95vw;
+    height: 95vw;
     margin: auto;
   }
   .grid__item {
